@@ -1,116 +1,157 @@
-<div class="my-3">
-  <h2> SpaceX Launch Program </h2>
-</div>
+<div class="continer body">
 
-.
-<div class="row" id="route">
-  <div class=" col-md-3  col-lg-2 ">
-    <div class="card">
-      <div class="card-body">
-        <div class="my-2 mx-auto title">
-          <h3>Filters</h3>
-        </div>
-
-        <span class="text-muted mx-auto">Launched Year</span>
-        <div class="line"></div>
-        <div class="row continer my-3">
-          <div class="col-6">
-            <button (click)="launchYear('2006')" class="btn btn-success my-2">2006</button>
-          </div>
-          <div class="col-6">
-            <button (click)="launchYear('2007')" class="btn btn-success my-2">2007</button>
-          </div>
-          <div class="col-6">
-            <button (click)="launchYear('2008')" class="btn btn-success my-2">2008</button>
-          </div>
-          <div class="col-6">
-            <button (click)="launchYear('2009')" class="btn btn-success my-2">2009</button>
-          </div>
-          <div class="col-6">
-            <button (click)="launchYear('2010')" class="btn btn-success my-2">2010</button>
-          </div>
-          <div class="col-6">
-            <button (click)="launchYear('2011')" class="btn btn-success my-2">2011</button>
-          </div>
-          <div class="col-6">
-            <button (click)="launchYear('2012')" class="btn btn-success my-2">2012</button>
-          </div>
-          <div class="col-6">
-            <button (click)="launchYear('2013')" class="btn btn-success my-2">2013</button>
-          </div>
-          <div class="col-6">
-            <button (click)="launchYear('2014')" class="btn btn-success my-2">2014</button>
-          </div>
-          <div class="col-6">
-            <button (click)="launchYear('2015')" class="btn btn-success my-2">2015</button>
-          </div>
-          <div class="col-6">
-            <button (click)="launchYear('2016')" class="btn btn-success my-2">2016</button>
-          </div>
-          <div class="col-6">
-            <button (click)="launchYear('2017')" class="btn btn-success my-2">2017</button>
-          </div>
-          <div class="col-6">
-            <button (click)="launchYear('2018')" class="btn btn-success my-2">2018</button>
-          </div>
-          <div class="col-6">
-            <button (click)="launchYear('2019')" class="btn btn-success my-2">2019</button>
-          </div>
-          <div class="col-6">
-            <button (click)="launchYear('2020')" class="btn btn-success my-2">2020</button>
-          </div>
-
-        </div>
-
-        <span class="text-muted mx-auto">Successful Launch</span>
-        <div class="line"></div>
-        <div class="row continer">
-          <div class="col-6">
-            <button (click)="launching(true)" class="btn btn-success my-2">True</button>
-          </div>
-          <div class="col-6">
-            <button (click)="launching(false)" class="btn btn-success my-2">False</button>
-          </div>
-        </div>
-
-        <span class="text-muted mx-auto">Successful Landing</span>
-        <div class="line"></div>
-        <div class="row continer">
-          <div class="col-6">
-            <button (click)="landing(true)" class="btn btn-success my-2">True</button>
-          </div>
-          <div class="col-6">
-            <button (click)="landing(false)" class="btn btn-success my-2">False</button>
-          </div>
-        </div>
-
-      </div>
-    </div>
+  <div class="my-3">
+    <h2> SpaceX Launch Program </h2>
   </div>
 
-  <div class="  col-md-9 col-lg-10 grid-margin stretch-card">
-    <div class="row continer ">
-      <div *ngFor="let mission of missions" class="col-md-6 my-2 col-lg-3 grid-margin stretch-card">
-        <div class="card">
-          <div class="card-body">
-            <img class="card-img-top" src="{{mission?.links?.mission_patch}}" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title text-primary"> {{mission?.rocket?.rocket_name}} </h5>
-              <span><b>Mission Ids :</b></span>
-              <ul >
-                <li  *ngFor="let ids of mission?.mission_id" >
-                {{ ids}}
-                </li>
-              </ul>
+  .
+  <div class="row" >
+    <div class=" col-md-3  col-lg-2 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <div class="my-2 mx-auto title">
+            <h3>Filters</h3>
+          </div>
 
-              <span><b>Launch Year : </b> {{mission?.launch_year}} </span><br>
-              <span><b>Successful Launch : </b> {{mission?.launch_success}} </span><br>
-              <span><b>Successful Landing : </b> {{mission?.is_tentative}} </span><br>
+          <div class=" text-center">Launched Year</div>
+          <div class="line"></div>
+          <div class="row grid-margin stretch-card my-3">
+            <div class="col-6">
+              <button (click)="launchYear('2006')" class="btn btn-success my-2">2006</button>
+            </div>
+            <div class="col-6">
+              <button (click)="launchYear('2007')" class="btn btn-success my-2 ">2007</button>
+            </div>
+            <div class="col-6 ">
+              <button (click)="launchYear('2008')" class="btn btn-success my-2">2008</button>
+            </div>
+            <div class="col-6">
+              <button (click)="launchYear('2009')" class="btn btn-success my-2">2009</button>
+            </div>
+            <div class="col-6">
+              <button (click)="launchYear('2010')" class="btn btn-success my-2">2010</button>
+            </div>
+            <div class="col-6">
+              <button (click)="launchYear('2011')" class="btn btn-success my-2">2011</button>
+            </div>
+            <div class="col-6">
+              <button (click)="launchYear('2012')" class="btn btn-success my-2">2012</button>
+            </div>
+            <div class="col-6">
+              <button (click)="launchYear('2013')" class="btn btn-success my-2">2013</button>
+            </div>
+            <div class="col-6">
+              <button (click)="launchYear('2014')" class="btn btn-success my-2">2014</button>
+            </div>
+            <div class="col-6">
+              <button (click)="launchYear('2015')" class="btn btn-success my-2">2015</button>
+            </div>
+            <div class="col-6">
+              <button (click)="launchYear('2016')" class="btn btn-success my-2">2016</button>
+            </div>
+            <div class="col-6">
+              <button (click)="launchYear('2017')" class="btn btn-success my-2">2017</button>
+            </div>
+            <div class="col-6">
+              <button (click)="launchYear('2018')" class="btn btn-success my-2">2018</button>
+            </div>
+            <div class="col-6">
+              <button (click)="launchYear('2019')" class="btn btn-success my-2">2019</button>
+            </div>
+            <div class="col-6">
+              <button (click)="launchYear('2020')" class="btn btn-success my-2">2020</button>
+            </div>
+
+          </div>
+
+          <div class=" text-center my-2">Successful Launch</div>
+          <div class="line"></div>
+          <div class="row continer">
+            <div class="col-6">
+              <button (click)="launching('true')" class="btn btn-success my-2">True</button>
+            </div>
+            <div class="col-6">
+              <button (click)="launching('false')" class="btn btn-success my-2">False</button>
+            </div>
+          </div>
+
+          <div class=" text-center">Successful Landing</div>
+          <div class="line"></div>
+          <div class="row continer my-2">
+            <div class="col-6">
+              <button (click)="landing('true')" class="btn btn-success my-2">True</button>
+            </div>
+            <div class="col-6">
+              <button (click)="landing('false')" class="btn btn-success my-2">False</button>
+            </div>
+          </div>
+
+          <div class=" text-center my-2">Reset</div>
+          <div class="line"></div>
+          <div class="row continer">
+            <div class="col-12">
+              <button (click)="reset()" class="btn btn-danger my-2">Reset</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="  col-md-9 col-lg-10 grid-margin stretch-card">
+      <div class="row">
+        <div *ngIf="loading" class="col-12 col-xl-12 grid-margin stretch-card" >
+          <div class="card overflow-hidden">
+            <div class="card-body">
+
+
+              <div class="text-center my-3">
+                <h4> Loading... </h4>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <div *ngIf="!loading" class="row stretch-card grid-margin ">
+        <div *ngFor="let mission of missions" class="col-md-6 my-2 col-lg-3 grid-margin stretch-card">
+          <div class="card">
+            <div class="card-body">
+              <img class="card-img-top" src="{{mission?.links?.mission_patch}}" alt="Image Of {{mission?.rocket?.rocket_name}}">
+              <div class="card-body">
+                <h5 class="card-title text-primary"> {{mission?.rocket?.rocket_name}} </h5>
+                <span><b>Mission Ids :</b></span>
+                <ul>
+                  <li *ngFor="let ids of mission?.mission_id">
+                    {{ ids}}
+                  </li>
+                </ul>
+
+                <span><b>Launch Year : </b> {{mission?.launch_year}} </span><br>
+                <span><b>Successful Launch : </b> {{mission?.launch_success}} </span><br>
+                <span><b>Successful Landing : </b> {{mission?.rocket.first_stage.cores[0].land_success}} </span><br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="!loading" class="row">
+        <div class="col-12 col-xl-12 grid-margin stretch-card" >
+          <div class=" overflow-hidden">
+            <div class="card-body">
+
+
+              <div class="text-center my-3">
+                <h4> Developed By : Yishnu Pramanik </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
+
   </div>
 
 </div>
+
