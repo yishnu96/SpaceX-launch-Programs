@@ -10,8 +10,8 @@ export class AppComponent implements OnInit {
   title = 'spaceX';
 
   missions: any[] | undefined;
-  launch: string | undefined ;
-  land: string | undefined ;
+  launch: boolean | undefined ;
+  land: boolean | undefined ;
   loading: boolean = true;
   year: string | undefined;
 
@@ -69,12 +69,12 @@ export class AppComponent implements OnInit {
 
 
     let params = new HttpParams();
-    params = params.append('launch_success', );
-    params = params.append('land_success', 10);
-    params = params.append('launch_year', this.year)
+    // params = params.append('launch_success', );
+    // params = params.append('land_success', 10);
+    // params = params.append('launch_year', this.year)
 
 
-    'https://api.spaceXdata.com/v3/launches?limit=100&launch_success=true&land_success=true&launch_year=2014'
+    // 'https://api.spaceXdata.com/v3/launches?limit=100&launch_success=true&land_success=true&launch_year=2014'
       // let url = 'https://api.spaceXdata.com/v3/launches?limit=100&launch_year='+ this.year;
     // let url = 'https://api.spacexdata.com/v3/launches?limit=100&amp;launch_success=' + this.launch + '&amp;land_success=' + this.land + '&amp;launch_year=' + this.year;
     // this.http.get(url).subscribe(( data: any) => {
@@ -82,7 +82,7 @@ export class AppComponent implements OnInit {
     //   this.missions = data;
     // })
 
-   this.http.get('https://api.spaceXdata.com/v3/launches?limit=100',{ launch_success : launch  })
+  //  this.http.get('https://api.spaceXdata.com/v3/launches?limit=100',{ launch_success : launch  })
 
 
     // this.http.get( 'https://api.spacexdata.com/v3/launches?limit=100', { params: options } )
