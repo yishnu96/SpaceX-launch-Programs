@@ -17,11 +17,11 @@ export class AppComponent implements OnInit {
 
   constructor( private http: HttpClient ) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.getAllPrograms();
   }
 
-  getAllPrograms() {
+  getAllPrograms(): void {
     this.http.get( 'https://api.spacexdata.com/v3/launches?limit=100' ).subscribe( ( data: any ) => {
       console.log( data );
       this.missions = data;
@@ -29,22 +29,22 @@ export class AppComponent implements OnInit {
     } );
   }
 
-  launchYear( year: string ) {
+  launchYear( year: string ): void {
     this.year = year;
     this.getlandingPrograms();
   }
 
-  landing( e: string ) {
+  landing( e: string ): void {
     this.land = e;
     this.getlandingPrograms();
   }
 
-  launching( e: string ) {
+  launching( e: string ): void {
     this.launch = e;
     this.getlandingPrograms();
   }
 
-  reset() {
+  reset(): void {
     this.getAllPrograms();
     this.land = undefined;
     this.launch = undefined;
@@ -52,7 +52,7 @@ export class AppComponent implements OnInit {
 
   }
 
-  getlandingPrograms() {
+  getlandingPrograms(): void {
     this.loading = true;
     console.log( this.launch, this.land, this.year );
 
