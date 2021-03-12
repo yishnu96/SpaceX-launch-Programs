@@ -1,10 +1,12 @@
 # SpaceX
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.0.The App Send is frontend of All launches Program by SPACEX from 2006 to 2020. you can filter the year and launches
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Clone the app
+- Navigate to `SpaceX-launch-Programs`
+- Run `ng server` or `npm start`. Navigate to `http://localhost:4200/`
 
 ## Code scaffolding
 
