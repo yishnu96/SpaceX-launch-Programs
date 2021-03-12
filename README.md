@@ -6,6 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 - Clone the app
 - Navigate to `SpaceX-launch-Programs`
+- Install Dependencies `npm i`
 - Run `ng server` or `npm start`. Navigate to `http://localhost:4200/`
 
 ## Code scaffolding
